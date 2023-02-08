@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {BasicStateExample} from "./components/ClassComponents/BasicStateExample/BasicStateExample";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let propValue = "2";
+    return (
+        <div className={"container-fluid text-center"}>
+            <div className={"d-block h1 p-4"}>Basic React Application</div>
+            <div className={"row border border-5 ml-mr-4"}>
+                <BasicStateExample/>
+            </div>
+        </div>
+    );
 }
 
 export default App;
+
+
+{/*<div>*/
+}
+{/*    <div> Main Functional Component </div>*/
+}
+{/*    <>*/
+}
+{/*        <BasicFuncStateExample title={"Functional Component"}/>*/
+}
+{/*    </>*/
+}
+{/*</div>*/
+}

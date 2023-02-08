@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing 1`] = `
+<div>
+  <div
+    class="App"
+    style="background-color: lightblue;"
+  >
+    <div>
+      Main Component
+    </div>
+    <div>
+      Hello
+    </div>
+    <div
+      data-testid="basicComponent"
+    >
+      Hello Basic Component
+    </div>
+    <div
+      style="display: flex; justify-content: center;"
+    >
+      <div
+        style="background-color: red;"
+      >
+        <div>
+          State Component
+        </div>
+        <button
+          data-testid="basic-state-example-button"
+        >
+          counter
+        </button>
+      </div>
+      <div
+        style="background-color: lightgreen;"
+      >
+        <div>
+          Props Component
+        </div>
+        <div
+          class="counterMessage"
+          data-testid="StateChangeMessage"
+        >
+          Hello 
+          2
+           is updated
+        </div>
+        <div>
+          <input
+            value=""
+          />
+          <button
+            data-testid="basic-state-example-button"
+          >
+            counter
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
