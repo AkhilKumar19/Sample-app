@@ -14,7 +14,7 @@ export class BasicPropsExample extends Component {
             <div className={"counterMessage"} data-testid={"StateChangeMessage"}>
                 Hello {this.props.propValue} is updated
             </div>
-            <div className={"ftn-italic"}>{this.props.counter}</div>
+            <div className={"font-large ftn-italic"}>{this.props.counter}</div>
             <div className={"text-color-info"}>{this.props.changedValue}</div>
         </div>);
     }

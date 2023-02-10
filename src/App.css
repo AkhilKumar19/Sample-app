@@ -59,6 +59,9 @@ body {
     color: #61dafb;
 }
 
+.font-large {
+    font-size: 60px;
+}
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
