@@ -1,5 +1,6 @@
 import {Component} from "react";
 import {BasicPropsExample} from "../BasicPropsExample/BasicPropsExample";
+import Button from "../../common/Button";
 
 export class BasicStateExample extends Component {
 
@@ -10,19 +11,19 @@ export class BasicStateExample extends Component {
             "value": "",
             "changedValue": ""
         };
-        this.OnCounterChange = this.OnCounterChange.bind(this);
+        this.onCounterChange = this.onCounterChange.bind(this);
         this.resetCounter = this.resetCounter.bind(this);
         this.onInputChange = this.onInputChange.bind(this);
     }
 
 
-    OnCounterChange = () => {
+    onCounterChange = () => {
         let changeCounterValue = this.state.counter;
         console.log("basic State Example " + changeCounterValue);
         this.setState({counter: (changeCounterValue + 1)});
     }
 
-    OnStateChange = () => {
+    onStateChange = () => {
         let updateValue = "";
         if (this.state.value !== null) {
             updateValue = this.state.value;
@@ -51,10 +52,10 @@ export class BasicStateExample extends Component {
                         <div data-testid={"StateChangeMessage"}>
                             Hello State counter value is updated to {this.state.counter}
                         </div>
-                        <button className={"btn btn-info m-2"} onClick={this.OnCounterChange}
-                                data-testid={"basic-state-example-button"}>counter
-                        </button>
-                        <button className={"btn btn-secondary m-2"} onClick={this.resetCounter}> reset counter</button>
+                        <Button className={"btn btn-info m-2"} inputOnClick={this.onCounterChange}
+                                buttonName={"Counter"}/>
+                        <Button className={"btn btn-secondary m-2"} inputOnClick={this.resetCounter}
+                                buttonName={"reset counter"}/>
                     </div>
                     <div>
                         {(this.state.value !== "") &&
@@ -67,18 +68,17 @@ export class BasicStateExample extends Component {
                         <div className={"row d-inline-flex"}>
                             <input type="text" className={"form-label mb-2"} value={this.state.value}
                                    onChange={this.onInputChange}/>
-                            <button className={"btn btn-primary"} onClick={this.OnStateChange}
-                                    data-testid={"basic-state-example-button"}>Update State
-                            </button>
+                            <Button className={"btn btn-primary"} inputOnClick={this.onStateChange}
+                                    buttonName={"Update Props"}/>
                         </div>
                     </div>
                 </div>
-                <div className={"col"}>
-                    <BasicPropsExample propValue={"Static Prop"}
-                                       counter={this.state.counter}
-                                       changedValue={this.state.changedValue}
-                    />
-                </div>
+                {/*<div className={"col"}>*/}
+                {/*    <BasicPropsExample propValue={"Static Prop"}*/}
+                {/*                       counter={this.state.counter}*/}
+                {/*                       changedValue={this.state.changedValue}*/}
+                {/*    />*/}
+                {/*</div>*/}
             </div>
         );
     }
