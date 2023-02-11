@@ -1,6 +1,6 @@
 import {Component} from "react";
-import {BasicPropsExample} from "../BasicPropsExample/BasicPropsExample";
 import Button from "../../common/Button";
+import {BasicPropsExample} from "../BasicPropsExample/BasicPropsExample";
 
 export class BasicStateExample extends Component {
 
@@ -73,12 +73,12 @@ export class BasicStateExample extends Component {
                         </div>
                     </div>
                 </div>
-                {/*<div className={"col"}>*/}
-                {/*    <BasicPropsExample propValue={"Static Prop"}*/}
-                {/*                       counter={this.state.counter}*/}
-                {/*                       changedValue={this.state.changedValue}*/}
-                {/*    />*/}
-                {/*</div>*/}
+                <div className={"col"}>
+                    <BasicPropsExample propValue={"Static Prop"}
+                                       counter={this.state.counter}
+                                       changedValue={this.state.changedValue}
+                    />
+                </div>
             </div>
         );
     }

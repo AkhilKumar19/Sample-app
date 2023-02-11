@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
-    let propValue = "2";
     return (
         <div className={"container-fluid text-center"}>
             <div className={"d-block h1 p-4"}>Basic React Application</div>
